@@ -29,7 +29,7 @@ public class GetRateValuesUseCase {
         var result = restService.getPostPlainJSON();
         JsonParser jsonParser = new JsonParser();
         Map<String, Integer> map = new HashMap<>();
-        JsonObject object = jsonParser.parse(result).getAsJsonObject().get("rates").getAsJsonObject();
+        JsonObject object = jsonParser.parse(result).getAsJsonObject().get(RATES).getAsJsonObject();
 
         listOfCountryCode.forEach(
                 countryCode -> {
