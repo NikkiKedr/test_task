@@ -8,13 +8,13 @@ import org.springframework.web.client.RestTemplate;
 public class RestService {
 
     private final RestTemplate restTemplate;
+    private static final String VAT_RATES_URL = "http://5.189.172.205:15500/vat-rates";
 
     public RestService(RestTemplateBuilder restTemplateBuilder) {
         this.restTemplate = restTemplateBuilder.build();
     }
 
     public String getPostPlainJSON(){
-        String url = "http://5.189.172.205:15500/vat-rates";
-        return restTemplate.getForObject(url, String.class);
+        return restTemplate.getForObject(VAT_RATES_URL, String.class);
     }
 }

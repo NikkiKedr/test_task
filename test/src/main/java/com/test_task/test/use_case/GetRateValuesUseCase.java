@@ -14,6 +14,7 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 import static com.test_task.test.common.JsonTag.COUNTRY;
+import static com.test_task.test.common.JsonTag.RATES;
 import static com.test_task.test.common.JsonTag.STANDARD_RATE;
 
 @Service
